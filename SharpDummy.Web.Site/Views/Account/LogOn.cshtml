@@ -1,0 +1,14 @@
+﻿@model SharpDummy.Web.Core.ViewModels.LogOnViewModel
+@using (Html.BeginForm("LogOn", "Account",null,FormMethod.Post,new { @class = "form-stacked" }))
+{
+    <fieldset>
+        <legend>Вход в администраторскую часть</legend>  
+        <div class="clearfix">
+            @Html.ValidationSummary("", new { @class = "alert-message block-message error" })
+        </div> 
+        @Html.EditorForModel()
+        <div class="form-actions">
+            <button type="submit" class="btn large primary">Войти</button>  
+        </div> 
+    </fieldset>
+}
